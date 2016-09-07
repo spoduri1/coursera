@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<title>JS color Guessing Game</title>
+</head>
+<body onload="do_game()">
+<script>
+
+var target_index;
+var guess_input_text;
+var guess_input;
+var finished=false;
+var count=0;
+var color=["Aqua","Yellow","Cyan","DarkRed","GoldenRod","HotPink","LightCoral","MediumVioletRed","Black","Indigo","Violet","Orange"];
+var myBody;
+
+function do_game(){
+
+var random_number= Math.random()*(color.length-1);
+var random_number_integer= Math.floor(random_number);
+target_index=color[(random_number_integer)+1];
+alert(target_index);
+
+while (!finished) {
+guess_input_text=prompt("I am thinking of one of these colors\n\n"+"Aqua,Yellow,Cyan,DarkRed,GoldenRod,HotPink,LightCoral,MediumVioletRed,Black,Indigo,Violet,Orange\n"+"what color am I thinking of?");
+if(guess_input_text==target_index){
+return true;
+}
+}
+}
+</script>
+</body>
+</html>
